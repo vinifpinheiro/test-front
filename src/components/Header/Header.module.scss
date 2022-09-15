@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.header{
+    display: flex;
+    justify-content: center;
+    background: $color--components;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.text__header {
+    display: flex;
+    display: contents;
+
+    font-family: $text--font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 48px;
+    color: $color--text;
+}
