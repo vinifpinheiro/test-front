@@ -10,11 +10,16 @@
 .text__header {
     display: flex;
     display: contents;
-
     font-family: $text--font;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 22px;
     line-height: 48px;
     color: $color--text;
+}
+
+@media (max-width: $mobile){
+    .text__header{
+        font-size: 18px;
+    }
 }
