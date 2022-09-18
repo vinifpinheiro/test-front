@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss"
 
-function Header () {
+const Header = () => {
     return(
         <header className={styles.header}>
             <h1 className={styles.text__header}>Sistema de Dados Bancários</h1>
