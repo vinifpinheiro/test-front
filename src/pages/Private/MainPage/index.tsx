@@ -1,16 +1,8 @@
-import {useContext} from "react"
-import { AuthContext } from "../../../contexts/auth"
+import Main from "../../../components/Main"
 
 const MainPage = () => {
-    const {logout} = useContext(AuthContext)
-
-    const handleLogout = () => {
-        logout()
-    }
     return(
-        <>
-            <button onClick={handleLogout}>Logout</button>
-        </>
+        <Main />
     )
 }
 
