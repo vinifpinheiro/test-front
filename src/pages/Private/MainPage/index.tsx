@@ -1,8 +1,8 @@
-import Main from "../../../components/Main"
+import MainData from "../../../components/MainData"
 
 const MainPage = () => {
     return(
-        <Main />
+        <MainData />
     )
 }
 

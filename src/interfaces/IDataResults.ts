@@ -1,4 +1,3 @@
-
 export interface IDataResults {
     id: number
     name:string
@@ -10,4 +9,5 @@ export interface IDataResults {
         agency: 3634
         account: string
     }
+    text: any
 }
