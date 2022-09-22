@@ -1,26 +1,26 @@
 @import "../../styles/variables";
 
-.header{
-    display: flex;
-    justify-content: center;
-    background: $color--components;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 100px 0 rgba(0,0,0,0.19);
+.header {
+  display: flex;
+  justify-content: center;
+  background: $color--components;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 100px 0 rgba(0, 0, 0, 0.19);
 }
 
 .text__header {
-    display: flex;
-    display: contents;
-    font-family: $text--font;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 48px;
-    color: $color--text;
+  display: flex;
+  display: contents;
+  font-family: $text--font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 48px;
+  color: $color--text;
 }
 
-@media (max-width: $mobile){
-    .text__header{
-        font-size: 16px;
-    }
+@media (max-width: $mobile) {
+  .text__header {
+    font-size: 16px;
+  }
 }

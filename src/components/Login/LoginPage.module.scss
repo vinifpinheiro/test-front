@@ -1,190 +1,187 @@
 @import "../../styles/variables";
 
-.login{
-    display: flex;
-    background-color: #00D1FF66;
-    justify-content: space-evenly;
-    position: relative;
-    top: 90px;
-    flex-direction: column;
-    width: 555px;
-    height: 489px; 
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.login {
+  display: flex;
+  background-color: #00d1ff66;
+  justify-content: space-evenly;
+  position: relative;
+  top: 90px;
+  flex-direction: column;
+  width: 555px;
+  height: 489px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.texts{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    padding-bottom: 40px;
-    padding-top: 80px;
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding-bottom: 40px;
+  padding-top: 80px;
 }
 
-.text__login{
-    display: flex;
-    align-content: flex-start;
-    justify-content: center;
-    margin: 0%;
-    font-family: $text--font;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
-    color: $color--text;
+.text__login {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  margin: 0%;
+  font-family: $text--font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: $color--text;
 }
 
-.subtext__login{
-    display: flex;
-    justify-content: center;
-    margin: 0%;
+.subtext__login {
+  display: flex;
+  justify-content: center;
+  margin: 0%;
 
-    font-family: $text--font;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px; 
-    color: $color--text;
+  font-family: $text--font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color--text;
 }
 
-.login__form{
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    margin-bottom: 80px;
-    
+.login__form {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  margin-bottom: 80px;
 }
 
-.input__container{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-bottom: 10px;
+.input__container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 10px;
 }
 
-input{
-    border: none;
-    border-radius: 16px;
-    width: 335px;
-    height: 70px;
+input {
+  border: none;
+  border-radius: 16px;
+  width: 335px;
+  height: 70px;
 
-    font-family: $text--font;
-    font-style: normal;
-    font-weight: 100;
-    flex-grow: 20px;
-    font-size: 15px;
-    line-height: 30px;
+  font-family: $text--font;
+  font-style: normal;
+  font-weight: 100;
+  flex-grow: 20px;
+  font-size: 15px;
+  line-height: 30px;
 }
-::placeholder{
-    color: black;
-    opacity: 0.4;
-}
-
-label{
-    top: 10px;
-
-    font-family: $text--font;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;  
+::placeholder {
+  color: black;
+  opacity: 0.4;
 }
 
-.button__login{
-    margin: auto;
-    margin-top: 40px;
-    display: flex;
-    align-content: center;
+label {
+  top: 10px;
 
+  font-family: $text--font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
 
-button{
-    background-color: white;
-    border: 0px;
-    width: 170px;
-    height: 69px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: $text--font;
-    font-style: normal;
-    font-weight: 600;
+.button__login {
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  align-content: center;
+}
+
+button {
+  background-color: white;
+  border: 0px;
+  width: 170px;
+  height: 69px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: $text--font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.button__login :hover {
+  background-color: rgb(243, 239, 239);
+}
+@media (max-width: $mobile) {
+  .login {
+    width: 380.21px;
+    height: 335px;
+  }
+  .texts {
+    padding-bottom: 20px;
+  }
+  .text__login {
     font-size: 24px;
-    line-height: 36px
+  }
+  .subtext__login {
+    font-size: 20px;
+  }
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    width: 300px;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .button__login {
+    margin: auto;
+  }
 }
 
-.button__login :hover{
-    background-color: rgb(243, 239, 239);
-}
-@media (max-width:$mobile ){
-    .login{
-        width: 380.21px;
-        height: 335px;  
-    }
-    .texts{
-        padding-bottom: 20px;
-    }
-    .text__login{
-        font-size: 24px;
-    }
-    .subtext__login{
-        font-size: 20px;
-    }
-    label{
-        font-size: 16px;
-    }
+@media (max-width: 385px) {
+  .login {
+    width: 250px;
+  }
 
-    input{
-        width: 300px;
-        height: 50px;
-        font-size: 12px;
-    }
+  .texts {
+    padding-bottom: 10px;
+  }
 
-    button{
-        width: 100px;
-        height: 50px;
-        font-size: 20px;
-    }
-    .button__login{
-        margin: auto; 
-    }
-}
+  .text__login {
+    font-size: 20px;
+  }
 
-@media (max-width: 385px){
-    .login{
-        width: 250px;
-    }
+  .subtext__login {
+    font-size: 16px;
+  }
 
-    .texts{
-        padding-bottom: 10px;
-    }
+  label {
+    font-size: 16px;
+  }
 
-    .text__login{
-        font-size: 20px;
-    }
+  input {
+    width: 200px;
+    height: 50px;
+    font-size: 12px;
+  }
 
-    .subtext__login{
-        font-size: 16px;
-    }
+  button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+  }
 
-    label{
-        font-size: 16px;
-    }
-
-    input{
-        width: 200px;
-        height: 50px;
-        font-size: 12px;
-    }
-
-    button{
-        width: 100px;
-        height: 50px;
-        font-size: 20px;
-    }
-
-    .button__login{
-        margin: auto;
-        
-    }
+  .button__login {
+    margin: auto;
+  }
 }

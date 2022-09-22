@@ -1,7 +1,7 @@
-import axios from "axios"
+import axios from "axios";
 
 const httpDefault = axios.create({
-     baseURL: 'https://demo8933322.mockable.io'
-})
+  baseURL: "https://demo8933322.mockable.io",
+});
 
-export default httpDefault
+export default httpDefault;

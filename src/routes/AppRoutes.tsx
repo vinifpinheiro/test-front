@@ -6,29 +6,37 @@ import { AuthProvider , AuthContext } from '../contexts/auth';
 import {useContext} from 'react'
 
 const AppRoutes = () => {
-    const Private = ({children}: {children : any}) =>{
-        const {authenticated , loading} = useContext(AuthContext)
-        
-        if(loading){
-            return <div className="loading">Carregando...</div>
-        }
+  const Private = ({ children }: { children: any }) => {
+    const { authenticated, loading } = useContext(AuthContext);
 
-        if(!authenticated) {
-            return <Navigate to="/login" />
-        }
-        return children
+    if (loading) {
+      return <div className="loading">Carregando...</div>;
     }
 
-    return(
+    if (!authenticated) {
+      return <Navigate to="/login" />;
+    }
+    return children;
+  };
+
+  return (
     <Router>
-        <AuthProvider>
-            <Header />
-            <Routes>
-                <Route path='/login' element={<LoginPage />} />
-                <Route path='/' element={<Private> <MainPage /> </Private>} />
-            </Routes>
-        </AuthProvider>
+      <AuthProvider>
+        <Header />
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/"
+            element={
+              <Private>
+                {" "}
+                <MainPage />{" "}
+              </Private>
+            }
+          />
+        </Routes>
+      </AuthProvider>
     </Router>
-    )
-}
-export default AppRoutes
+  );
+};
+export default AppRoutes;

@@ -1,9 +1,7 @@
-import MainData from "../../../components/MainData"
+import MainData from "../../../components/MainData";
 
 const MainPage = () => {
-    return(
-        <MainData />
-    )
-}
+  return <MainData />;
+};
 
-export default MainPage
+export default MainPage;

@@ -5,47 +5,49 @@ import { useNavigate } from 'react-router-dom';
 
 export const AuthContext = createContext<ILogin | null>(null);
 
-export const AuthProvider = ({children}: {children : any}) => {
-    const [user , setUser] = useState(null)
-    const [loading , setLoading] = useState(true)
-    const navigate = useNavigate()
+export const AuthProvider = ({ children }: { children: any }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const recoveredUser = localStorage.getItem('user')
+  useEffect(() => {
+    const recoveredUser = localStorage.getItem("user");
 
-        if(recoveredUser) {
-            setUser(JSON.parse(recoveredUser))
-        }
-
-        setLoading(false)
-    }, [])
-
-    const login = (userName: any, password: any) =>{
-        const loggedUser = {
-            userName,token
-        }
-
-        localStorage.setItem("user",JSON.stringify(loggedUser))
-
-        if(password === "teste") {
-            setUser(loggedUser)
-            navigate("/")
-            console.log()
-        }
-        else{
-            return alert("Usuario ou senha incorretos")
-        }
+    if (recoveredUser) {
+      setUser(JSON.parse(recoveredUser));
     }
 
-    const logout = () =>{
-        localStorage.removeItem("user")
-        setUser(null);
-        navigate("/login")
+    setLoading(false);
+  }, []);
+
+  const login = (userName: any, password: any) => {
+    const loggedUser = {
+      userName,
+      token,
+    };
+
+    localStorage.setItem("user", JSON.stringify(loggedUser));
+
+    if (password === "teste") {
+      setUser(loggedUser);
+      navigate("/");
+      console.log();
+    } else {
+      return alert("Usuario ou senha incorretos");
     }
-    
-    return(
-        <AuthContext.Provider value={{authenticated: !!user, user, loading, login, logout}}>
-            {children}
-        </AuthContext.Provider>
-    )
-}
+  };
+
+  const logout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/login");
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{ authenticated: !!user, user, loading, login, logout }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
