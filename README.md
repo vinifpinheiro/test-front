@@ -4,12 +4,14 @@ In the project directory, you can run:
 
 Install all dependencies in the project.
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `Login for system access`
+### `npm start`
+
+### `Make the project run with a static serve`
 
 User : any\
 Password: teste
