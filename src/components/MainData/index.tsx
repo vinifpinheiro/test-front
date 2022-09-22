@@ -13,6 +13,9 @@ const MainData = () => {
         .then((response: { data: SetStateAction<IDataResults[]> }) => { setNameData(response.data)})
     },[])
 
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+
     const {logout} = useContext(AuthContext)
     const handleLogout = () => {
         logout()
@@ -27,6 +30,7 @@ const MainData = () => {
                 {nameData.map(nameData => 
                     <div key={nameData.id} className={styles.data__bank}>
                         <h1 className={styles.h1__username}><FaUser /> {nameData.name}</h1>
+                        <h1 className={styles.h1__date}>{date}</h1>
                         <h1 className={styles.h1__userDocument}>Documento: {nameData.document}</h1>
                         <div className={styles.bank__specification}>
                             <p>-Nome do Banco: {nameData.bank.bankName}</p>

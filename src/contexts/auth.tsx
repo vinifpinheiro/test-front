@@ -33,7 +33,7 @@ export const AuthProvider = ({children}: {children : any}) => {
             console.log()
         }
         else{
-            return alert("Usuario ou senha errada")
+            return alert("Usuario ou senha incorretos")
         }
     }
 
