@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 export const AuthContext = createContext<ILogin | null>(null);
 
 export const AuthProvider = ({children}: {children : any}) => {
-    const navigate = useNavigate()
     const [user , setUser] = useState(null)
     const [loading , setLoading] = useState(true)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const recoveredUser = localStorage.getItem('user')
@@ -48,5 +48,4 @@ export const AuthProvider = ({children}: {children : any}) => {
             {children}
         </AuthContext.Provider>
     )
-    
 }

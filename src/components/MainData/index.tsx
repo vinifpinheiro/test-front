@@ -19,18 +19,18 @@ const MainData = () => {
     }
 
     return(
-        <div className={styles.contentMainPage}>
-            <div >
-                <button onClick={handleLogout} className={styles.logoutButton}><FaSignOutAlt /></button>
+        <div className={styles.content__mainPage}>
+            <div className={styles.button__container}>
+                <button onClick={handleLogout} className={styles.logout__button}><FaSignOutAlt /></button>
             </div>
-            <main className={styles.data__bank}>
+            <main>
                 {nameData.map(nameData => 
-                    <div key={nameData.id}>
+                    <div key={nameData.id} className={styles.data__bank}>
                         <h1 className={styles.h1__username}><FaUser /> {nameData.name}</h1>
                         <h1 className={styles.h1__userDocument}>Documento: {nameData.document}</h1>
                         <div className={styles.bank__specification}>
                             <p>-Nome do Banco: {nameData.bank.bankName}</p>
-                            <p>-Código do Banco{nameData.bank.code}</p>
+                            <p>-Código do Banco: {nameData.bank.code}</p>
                             <p>-Agência: {nameData.bank.agency}</p>
                             <p>-Conta: {nameData.bank.account}</p>
                         </div> 
